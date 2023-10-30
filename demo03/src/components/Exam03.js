@@ -16,6 +16,7 @@ const Exam03 = ()=> {
             <button className='btn btn-dark ms-2' onClick={()=>setMoney(money + 10000)}>1만원</button>
             <button className='btn btn-dark ms-2' onClick={()=>setMoney(0)}>초기화</button>
             <br/>
+            <input type="range" min="0" max="10000000" step="10000" value={money} onChange={e=>setMoney(parseInt(e.target.value))}/>
         </>
     );
 }
