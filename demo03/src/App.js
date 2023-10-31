@@ -12,7 +12,7 @@ function App() {
     <>
     <h1>각종 리액트 예제</h1>
     <hr/>
-    {/* <Exam01/>
+    <Exam01/>
     <hr/>
     <Exam02/>
     <hr/>
@@ -21,9 +21,9 @@ function App() {
     <Exam04/>
     <hr/>
     <Exam05/>
-    <hr/> */}
-    {/* <Exam06/> */}
-    {/* <hr/> */}
+    <hr/>
+    <Exam06/>
+    <hr/>
     <Exam07/>
     </>
   );
