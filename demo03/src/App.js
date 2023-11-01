@@ -6,12 +6,15 @@ import Exam04 from './components/Exam04';
 import Exam05 from './components/Exam05';
 import Exam06 from './components/Exam06';
 import Exam07 from './components/Exam07';
+import Exam08 from './components/Exam08';
+import Exam09 from './components/Exam09';
+import Exam10 from './components/Exam10';
 
 function App() {
   return (
     <>
     <h1>각종 리액트 예제</h1>
-    <hr/>
+    {/* <hr/>
     <Exam01/>
     <hr/>
     <Exam02/>
@@ -25,6 +28,14 @@ function App() {
     <Exam06/>
     <hr/>
     <Exam07/>
+    <hr/>
+    <Exam08/> */}
+    {/* <hr/>
+    <Exam09/> */}
+    <hr/>
+    <Exam10/>
+
+    <div className="my-5 py-5"></div>
     </>
   );
 }
