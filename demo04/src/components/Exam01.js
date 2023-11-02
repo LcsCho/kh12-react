@@ -3,10 +3,10 @@ import { Modal } from "bootstrap/dist/js/bootstrap.esm";
 
 const Exam01 = () => {
     const [todoList, setTodoList] = useState([
-        {no:1, title:"학원가기", type:"공부"},
-        {no:2, title:"영어단어외우기", type:"공부"},
-        {no:3, title:"헬스장가기", type:"운동"},
-        {no:4, title:"친구만나기", type:"일상"}
+        { no: 1, title: "학원가기", type: "공부" },
+        { no: 2, title: "영어단어외우기", type: "공부" },
+        { no: 3, title: "헬스장가기", type: "운동" },
+        { no: 4, title: "친구만나기", type: "일상" }
     ]);
     const [backup, setBackup] = useState([]);
     const [data, setData] = useState({
@@ -181,7 +181,7 @@ const Exam01 = () => {
                     <div className="row mt-4">
                         <div className="col">
 
-                            <table className="table" data-bs-theme="light">
+                            <table className="table table-hover" data-bs-theme="light">
                                 <thead>
                                     <tr>
                                         <th width="20%">번호</th>
@@ -234,7 +234,7 @@ const Exam01 = () => {
             </div>
 
             {/* Modal */}
-            <div className="modal fade" ref={bsModal} id="exampleModal" 
+            <div className="modal fade" ref={bsModal} id="exampleModal"
                 data-bs-backdrop="static" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div className="modal-dialog" role="document">
                     <div className="modal-content">
