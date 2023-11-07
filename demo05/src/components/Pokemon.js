@@ -11,7 +11,7 @@ const Pokemon = (props)=>{
     //서버에서 pokemon list를 불러와서 state에 설정하는 코드
     const loadPokemon = ()=>{
         axios({
-            url:"http://localhost:8080/pokemon/",
+            url:`${process.env.REACT_APP_REST_API_URL}/pokemon/`,
             method:"get"
         })
         .then(response=>{
@@ -33,7 +33,7 @@ const Pokemon = (props)=>{
 
         //axios({옵션}).then(성공시 실행할 함수).catch(실패시 실행할 함수);
         axios({
-            url:`http://localhost:8080/pokemon/${pokemon.no}`,
+            url:`${process.env.REACT_APP_REST_API_URL}/pokemon/${pokemon.no}`,
             method:"delete"
         })
         .then(response=>{
@@ -72,7 +72,7 @@ const Pokemon = (props)=>{
         //입력값 검사 후 차단 코드 추가
 
         axios({
-            url:"http://localhost:8080/pokemon/",
+            url:`${process.env.REACT_APP_REST_API_URL}/pokemon/`,
             method:"post",
             data:pokemon
         })
@@ -97,7 +97,7 @@ const Pokemon = (props)=>{
 
         const {no, name, type} = pokemon;
         axios({
-            url:`http://localhost:8080/pokemon/${no}`,
+            url:`${process.env.REACT_APP_REST_API_URL}/pokemon/${no}`,
             method:"put",
             data:{
                 name : name, 
