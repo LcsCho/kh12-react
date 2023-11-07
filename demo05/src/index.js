@@ -3,8 +3,9 @@ import ReactDOM from 'react-dom/client';
 
 // link 대신 import를 통해 설치한 라이브러리의 CSS를 불러오도록 처리
 // - node_modules에 설치한 요소들은 바로 이름을 사용하여 접근 가능
-import 'bootstrap/dist/css/bootstrap.min.css'
-import 'bootswatch/dist/sandstone/bootstrap.min.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootswatch/dist/sandstone/bootstrap.min.css';
+import "bootstrap";
 
 import App from './App';
 import reportWebVitals from './reportWebVitals';
