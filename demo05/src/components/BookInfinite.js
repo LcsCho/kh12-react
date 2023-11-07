@@ -1,5 +1,9 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import throttle from "lodash/throttle"; // 특정 함수의 발생 주기를 설정(강제 성능 하향)
+// 사용법 - throttle(원래 쓰려고 했던 함수, 주기)
+// import debounce from "lodash/debouce"; // 특정 이벤트의 마지막만 실행하도록 설정
+// 사용법 - debounce(원래 쓰려고 했던 함수, 주기)
 
 const BookInfinite = (props) => {
     const [page, setPage] = useState(1);
@@ -32,6 +36,15 @@ const BookInfinite = (props) => {
         setBookList([]);
         loadBook();
     }, [size]);
+
+    /////////////////////////////////////////////////////////////////////////
+    // 스크롤 이벤트 처리(scroll event handling)
+    /////////////////////////////////////////////////////////////////////////
+    useEffect(()=>{
+        window.addEventListener("scroll", throttle(()=>{
+            console.log("스크롤이 굴러간다!");
+        }, 5000));
+    }, []);
     
     return (
         <>
